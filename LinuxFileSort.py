@@ -1,31 +1,41 @@
 import os
 import shutil
 
+#Names of locations in case I need to change them quickly
+Root = "/home"
+User = "/victorpeng"
+
+Pic = "/Pictures"
+Aud = "/Music" 
+Vid = "/Videos"
+Doc = "/Documents"
+Cod = "/Code"
+
 #Dictionary of possible destinations
 destination = {
-    ".jpg": "/home/victorpeng/Pictures",
-    ".jpeg": "/home/victorpeng/Pictures",
-    ".heic": "/home/victorpeng/Pictures",
-    ".gif": "/home/victorpeng/Pictures",
-    ".png": "/home/victorpeng/Pictures",
-    ".webp": "/home/victorpeng/Pictures",
-    ".avif": "/home/victorpeng/Pictures",
+    ".jpg": Root + User + Pic,
+    ".jpeg": Root + User + Pic,
+    ".heic": Root + User + Pic,
+    ".gif": Root + User + Pic,
+    ".png": Root + User + Pic,
+    ".webp": Root + User + Pic,
+    ".avif": Root + User + Pic,
 
-    ".mid": "/home/victorpeng/Music",
-    ".midi": "/home/victorpeng/Music",
-    ".mp3": "/home/victorpeng/Music",
+    ".mid": Root + User + Aud,
+    ".midi": Root + User + Aud,
+    ".mp3": Root + User + Aud,
 
-    ".mp4": "/home/victorpeng/Videos",
-    ".mov": "/home/victorpeng/Videos",
+    ".mp4": Root + User + Vid,
+    ".mov": Root + User + Vid,
 
-    ".docx": "/home/victorpeng/Documents",
-    ".pdf": "/home/victorpeng/Documents",
-    ".pptx": "/home/victorpeng/Documents",
-    ".stl": "/home/victorpeng/Documents",
+    ".docx": Root + User + Doc,
+    ".pdf": Root + User + Doc,
+    ".pptx": Root + User + Doc,
+    ".stl": Root + User + Doc,
 
-    ".py": "/home/victorpeng/Documents/Code",
-    ".java": "/home/victorpeng/Documents/Code",
-    ".c": "/home/victorpeng/Documents/Code"
+    ".py": Root + User + Doc + Cod,
+    ".java": Root + User + Doc + Cod,
+    ".c": Root + User + Doc + Cod
 }
 
 #Actual Sort
