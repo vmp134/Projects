@@ -45,4 +45,4 @@ def sortDownloads(sourceFolder):
         if extension in destination:
             shutil.move(os.path.join(sourceFolder, filename), destination[extension])
         
-sortDownloads("/home/victorpeng/Downloads")
+sortDownloads("%s%s/Downloads" % (Root, User))
