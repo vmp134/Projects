@@ -4,7 +4,7 @@
 This is a multi-line comment.
 '''
 
-#Unlike Java, you do not need to declare variable types, nor do you need semicolons.
+#Unlike Java, you do not need to declare variable types, nor do you need semicolons, or a main method.
 myInt = 80
 myString = "Hello World!"
 
