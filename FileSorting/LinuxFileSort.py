@@ -39,10 +39,10 @@ destination = {
 }
 
 #Actual Sort
-def sortDownloads(sourceFolder):
-    for filename in os.listdir(sourceFolder):
+def sortDownloads(Folder):
+    for filename in os.listdir(Folder):
         extension = os.path.splitext(filename)[1].lower()
         if extension in destination:
-            shutil.move(os.path.join(sourceFolder, filename), destination[extension])
+            shutil.move(os.path.join(Folder, filename), destination[extension])
         
 sortDownloads("%s%s/Downloads" % (Root, User))
