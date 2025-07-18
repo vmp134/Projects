@@ -2,8 +2,14 @@ import os
 import shutil
 
 #Names of locations in case I need to change them quickly
-Root = "/home"
-User = "/victorpeng"
+
+#For Linux
+#Root = "/home"
+#User = "/victorpeng"
+
+#For Windows
+Root = "/Users"
+User = "/Victor"
 
 Pic = "/Pictures"
 Aud = "/Music" 

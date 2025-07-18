@@ -11,7 +11,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 #Main
-data = pd.read_csv('/home/victorpeng/Documents/Code/Projects/Example/PredictStock/Stocks2013-2018.csv', delimiter = ',', on_bad_lines = 'skip')
+data = pd.read_csv('/Users/Victor/Documents/Code/Projects/Example/PredictStock/Stocks2013-2018.csv', delimiter = ',', on_bad_lines = 'skip')
 data['date'] = pd.to_datetime(data['date'])
 
 companies = ['AAPL', 'AMD', 'FB', 'GOOGL', 'AMZN', 'NVDA', 'EBAY', 'CSCO', 'IBM']
