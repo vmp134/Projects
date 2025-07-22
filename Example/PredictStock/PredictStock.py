@@ -33,3 +33,5 @@ for index, company in enumerate(companies, 1):
     plt.plot(c['date'], c['volume'], c='purple', marker='*')
     plt.title(f"{company} Volume")
     plt.tight_layout()
+
+plt.show()
