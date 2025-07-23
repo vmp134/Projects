@@ -11,8 +11,10 @@ import warnings
 warnings.filterwarnings("ignore")
 
 #Main
-data = pd.read_csv('/Users/Victor/Documents/Code/Projects/Example/PredictStock/Stocks2013-2018.csv', delimiter = ',', on_bad_lines = 'skip')
+data = pd.read_csv('/home/victor/Documents/Code/Projects/Example/PredictStock/Stocks2013-2018.csv', delimiter = ',', on_bad_lines = 'skip')
 data['date'] = pd.to_datetime(data['date'])
+
+data.info()
 
 companies = ['AAPL', 'AMD', 'FB', 'GOOGL', 'AMZN', 'NVDA', 'EBAY', 'CSCO', 'IBM']
 
@@ -34,4 +36,13 @@ for index, company in enumerate(companies, 1):
     plt.title(f"{company} Volume")
     plt.tight_layout()
 
+plt.show()
+
+
+Nvidia = data[data['Name'] == 'NVDA']
+pred_range = Nvidia.loc[(Nvidia['date'] > datetime(2013, 1, 1)) & (Nvidia['date'] < datetime(2018, 1, 1))]
+plt.plot(Nvidia["date"], Nvidia['close'])
+plt.xlabel("Date")
+plt.ylabel("Close")
+plt.title("Nvidia Stock Prices")
 plt.show()
