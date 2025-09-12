@@ -8,8 +8,8 @@ import shutil
 #User = "/victorpeng"
 
 #For Windows
-Root = "/Users"
-User = "/Victor"
+Root = "/home"
+User = "/victor"
 
 Pic = "/Pictures"
 Aud = "/Music" 
