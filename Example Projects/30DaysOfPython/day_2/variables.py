@@ -11,7 +11,7 @@ Year = 2025
 is_married = False
 is_true = True
 is_light_on = True
-first = 1, second = 2, third = 3
+first, second, third = 1, 2, 3
 
 #2
 print(type(firstname))
@@ -30,7 +30,7 @@ print(type(third))
 print(len(firstname))
 print(len(firstname) > len(lastname))
 
-num_one = 5, num_two = 4
+num_one, num_two = 5, 4
 total = num_one + num_two
 diff = num_one - num_two
 product = num_one * num_two
