@@ -126,6 +126,24 @@ del <Dictionary>[] removes a key, value pair by taking a key
 <Dictionary>.pop() is the same concept
 '''
 
+#Tuples are an ordered collection of data that cannot be modified in length.
+
+planets = {
+    "Earth"
+    "Jupiter"
+    "Mars"
+    "Saturn"
+}
+
+#Sets are like tuples, but unordered.
+
+numbers = {
+    3.12,
+    5.22,
+    9.14,
+    2.1
+}
+
 #Modules in java are like java class files, with the exception that you have to import them.
 
 '''
@@ -153,3 +171,37 @@ print(num)
 decimalnum = input()
 decimalnum = float(input())
 print(decimalnum)
+
+#Virtual Environments protect your system, and kind of works like Docker.
+'''
+On Linux, make sure to do
+python3.12 -m venv [name]
+source [name]/bin/activate
+to run the virtual environment, and
+deactivate
+to exit out.
+'''
+
+#Like Ocaml, python can be run in the shell.
+'''
+Similar function, Ctrl+D or
+exit()
+to exit.
+
+Use
+type([name])
+to check the type of data
+'''
+
+#Lesser known operations.
+
+pyth = 5 // 2
+print(pyth)
+
+on = 3**2
+print(on)
+
+'''
+// is floor division, which removes the remainder/rounds down. Python shell treats numbers not like ints.
+** is exponentials
+'''

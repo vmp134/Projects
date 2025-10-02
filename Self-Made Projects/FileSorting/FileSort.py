@@ -38,6 +38,7 @@ destination = {
     ".pdf": Root + User + Doc,
     ".pptx": Root + User + Doc,
     ".stl": Root + User + Doc,
+    ".xlsx": Root + User + Doc,
 
     ".py": Root + User + Doc + Cod,
     ".java": Root + User + Doc + Cod,
