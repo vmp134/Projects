@@ -7,6 +7,11 @@ This is a multi-line comment.
 #Unlike Java, you do not need to declare variable types, nor do you need semicolons, or a main method.
 myInt = 80
 myString = "Hello World!"
+'''
+Variables cannot start with numbers.
+They cannot have symbols except underscore _.
+Variable names are case-sensitive.
+'''
 
 #Like C, putting variables in print statements requires output operators.
 print("I am going to say %s" % myString)
@@ -187,14 +192,28 @@ to exit out.
 Similar function, Ctrl+D or
 exit()
 to exit.
+'''
 
-Use
-type([name])
-to check the type of data
+#Built-in Functions.
+'''
+Python has a lot of built-in functions, make sure to know the important ones.
+
+print() - Print out 
+len() - counts number of characters
+type() - check the type of data
+str() - converts number to string
+int() - converts string to number, e.g. "10"
+float() - converts integer to decimal
+
+These take a list as a value
+min() - minimum value
+max() - maximum value
+sum() - returns sum
+
+help() - gives information, will give functions. Press Q to exit.
 '''
 
 #Lesser known operations.
-
 pyth = 5 // 2
 print(pyth)
 
