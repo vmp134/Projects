@@ -7,6 +7,10 @@ This is a multi-line comment.
 #Unlike Java, you do not need to declare variable types, nor do you need semicolons, or a main method.
 myInt = 80
 myString = "Hello World!"
+myMultiLineString = """Oh
+Wow
+Neat"""
+
 '''
 Variables cannot start with numbers.
 They cannot have symbols except underscore _.
@@ -25,6 +29,12 @@ print("I am going to say %s" % myString)
 %x - ints, in lowercase hex
 %X - ints, in uppercase hex
 '''
+
+#You can also format strings, using curly brackets {} and str.format or f
+name = 'Victor'
+age = 19
+print("I am {}, I am {} years old".format(name, age))
+print(f"I am {name}, I am {age} years old")
 
 #Remember Java's String methods? Some of those apply here.
 print(myString.index("e"))
