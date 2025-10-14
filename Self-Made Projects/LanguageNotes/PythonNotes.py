@@ -47,7 +47,8 @@ len(<String>) - returns length
 <String>.lower() - Java's .toLowerCase()
 <String>.startswith() - checks if the start of the string contains it
 <String>.endswith() - checks if the end of the string contains it
-<String>.split() - splits into list of strings - more on lists later
+<String>.split(a) - splits into list of strings with separator a - more on lists later
+<String>.replace(a, b) - replaces a with b
 
 <String>[4:8] - returns substring from 4 to 8
 <String>[4] - returns character at 4
