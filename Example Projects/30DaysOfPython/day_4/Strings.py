@@ -64,3 +64,58 @@ IndexOfC = Company.index("c")
 IndexOfF = Company.index("f")
 
 #22
+LastL = ("Coding For All People").rfind("l")
+
+#23
+IndexOfBecause = ('You cannot end a sentence with because because because is a conjunction').index("because")
+
+#24
+LastOfBecause = ('You cannot end a sentence with because because because is a conjunction').rindex("because")
+
+#25
+SliceBecause = ('You cannot end a sentence with because because because is a conjunction')[31:53]
+
+#26
+IndexOfBecause = ('You cannot end a sentence with because because because is a conjunction').index("because")
+
+#27
+SliceBecause = ('You cannot end a sentence with because because because is a conjunction')[31:53]
+
+#28
+StartCoding = Company.startswith("coding")
+
+#29
+EndCoding = Company.endswith("coding")
+
+#30
+Stripped = ('   Coding For All      ').strip(" ")
+
+#31 - thirty_days_of_python - identifiers can't start with numbers.
+
+#32
+Joined = (" ").join(['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon'])
+
+#33
+Escape = "I am enjoying this challenge.\nI just wonder what is next."
+
+#34
+Tab = "Name\tAge\tCountry\tCity\nAsabeneh\t250\tFinland\tHelsinki"
+
+#35
+radius = 10
+pi = 3.14
+area = pi * radius ** 2
+formated_string = 'The area of a circle with a radius {} is {:.2f}.'.format(radius, area)
+print(formated_string)
+
+#36
+a = 8
+b = 6
+
+print('{} + {} = {}'.format(a, b, a + b))
+print('{} - {} = {}'.format(a, b, a - b))
+print('{} * {} = {}'.format(a, b, a * b))
+print('{} / {} = {:.2f}'.format(a, b, a / b))
+print('{} % {} = {}'.format(a, b, a % b))
+print('{} // {} = {}'.format(a, b, a // b))
+print('{} ** {} = {}'.format(a, b, a ** b))
