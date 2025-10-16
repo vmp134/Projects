@@ -62,13 +62,30 @@ You can even use negative numbers for the above 5, counting from the end of the 
 '''
 
 #Lists are like ArrayLists in Java, with some differences of course.
+myList = list()
 myList = []
 myList.append(3)
 myList = [1, 2, 3]
 
 '''
 <List>.append() - adds to end of list
-<list>[] - access to element of list
+<List>.insert(index, item) - adds to index of list
+<List>.remove() - removes item
+<List>.pop() - removes item at index, or last item for nothing
+<List>.clear() - deletes all elements of the list
+<List>.copy() - copies all elements of the list so no changes are made to original
+<List>.sort() - sorts list in ascending order, use "reverse=true" for descending
+<List>.extend() - adds list to end of list, or you could use +
+<list>[] - access to element of list, or slices elements
+
+Methods also used from string: 
+count()
+index()
+reverse()
+
+You can also use negative indexes to access items!
+Use the keyword "in" to check if an item is in a list
+Use the keyword "Del" to delete an index, or the entire list
 '''
 
 #Condition statements are the same as java, e.g. ==, >, <, >=, <=
