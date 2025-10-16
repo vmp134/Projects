@@ -86,7 +86,11 @@ reverse()
 You can also use negative indexes to access items!
 Use the keyword "in" to check if an item is in a list
 Use the keyword "Del" to delete an index, or the entire list
+
+You can unpack lists by setting variables equal to the list
 '''
+a, *b = myList
+print(a)
 
 #Condition statements are the same as java, e.g. ==, >, <, >=, <=
 if 3 in myList:
