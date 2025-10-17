@@ -11,10 +11,10 @@ let floatmult = 2.5 *. 3.0;; (*Float Multiplier*)
 
 (*OCaml is very similar to python, with lists, tuples, and the like.*)
 
-(*Like java, we use two equals to compare.
-Uniquely, we compare pointer locations.*)
+(*For comparison, we use = to check values and == for memory locations.
+For Conditionals, we also require the return type to be the same.*)
 
-if (80 == myInt) then print_string "True"
+if (80 = myInt) then print_string "True"
 else print_string "False"
 
 (*OCaml is IMMUTABLE. Once things are declared, they stay that way.*)
@@ -28,12 +28,22 @@ let newList = 9::[1;2;3];;
 
 let rec sum a l = 
   match l with 
-  | [] -> (a + 0)             (*Empty list case.*)
+  | [] -> a                   (*Empty list case.*)
   | (x::xs) -> sum (a+x) xs   (*List of type x::xs, where we use recursion.*)
+
+(*Usually, recursion takes up a lot of stack frames, so we use an accumulator for tail recursion.
+This function is of type int -> int list -> int, where you have initial variables into return type.*)
 
 (*The wildcard is noted by _, used for any type.
 Shadowing is where you rebind a name in an inner scope for a different meaning.*)
 
 let x = 3;
 let g x = x + 3;;
+
+(*Key functions that are alternatives to rec are List.map and List.fold.
+fold_left and fold_right - only fold_left is tail recursive.*)
+
+let sumFold l = List.fold_left (fun a x - > a + x) 0 l
+
+let addOne l = List.map (fun x -> x + 1) l
 
