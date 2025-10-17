@@ -163,23 +163,31 @@ del <Dictionary>[] removes a key, value pair by taking a key
 <Dictionary>.pop() is the same concept
 '''
 
-#Tuples are an ordered collection of data that cannot be modified in length.
+#Tuples are an immutable, ordered collection of data 
 
-planets = {
-    "Earth"
-    "Jupiter"
-    "Mars"
-    "Saturn"
-}
+planets = ("Earth", "Jupiter", "Mars", "Saturn")
+PlanetList = list(planets)
 
-#Sets are like tuples, but unordered.
+#Sets are like tuples, but unordered. You can add and remove in sets.
 
-numbers = {
-    3.12,
-    5.22,
-    9.14,
-    2.1
-}
+numbers = {3.12, 5.22, 9.14, 2.1}
+numbers.add(9.4)
+numbers.update({3.3, 9.9})
+
+if (3.12 in numbers): 
+    numbers.discard(3.12) #Discard is the same as remove, but no raising errors.
+
+numbers.clear()
+PlanetSet = set(PlanetList)
+
+'''
+Advanced Set Functions
+<Set>.intersection(set) - returns the set of items in Set U set
+<Set>.issubset(set) - returns boolean if Set is subset of set
+<Set>.issuperset(set) - returns boolean if Set is superset of set
+<Set>.difference(set) - returns difference of Set and set
+<Set>.symmetric_difference(set) - returns symmetric difference of Set and set
+'''
 
 #Modules in java are like java class files, with the exception that you have to import them.
 

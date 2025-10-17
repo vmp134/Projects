@@ -287,7 +287,7 @@ countries = [
   'Yemen',
   'Zambia',
   'Zimbabwe',
-];
+]
 
 middle = countries[len(countries)/2]
 FirstHalf = countries[0:len(countries)/2]
