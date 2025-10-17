@@ -5,6 +5,10 @@ It spans multiple lines.*)
 let myInt = 80;;
 let myString = "Hello World!";;
 
+(*There are some unique operators in ocaml*)
+
+let floatmult = 2.5 *. 3.0;; (*Float Multiplier*)
+
 (*OCaml is very similar to python, with lists, tuples, and the like.*)
 
 (*Like java, we use two equals to compare.
