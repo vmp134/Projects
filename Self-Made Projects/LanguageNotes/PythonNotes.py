@@ -7,6 +7,7 @@ This is a multi-line comment.
 #Unlike Java, you do not need to declare variable types, nor do you need semicolons, or a main method.
 myInt = 80
 myString = "Hello World!"
+StringA, StringB = "Hello", "World"
 myMultiLineString = """Oh
 Wow
 Neat"""
@@ -95,6 +96,10 @@ print(a)
 #Condition statements are the same as java, e.g. ==, >, <, >=, <=
 if 3 in myList:
     print("3 is in myList")
+elif len(myList) > 0:
+    print("Somethign is in myList")
+else:
+    print("MyList is empty.")
 
 '''
 The "in" operator is used to check if things are in lists
@@ -159,8 +164,18 @@ for name, number in phonebook.items():
     print("Phone number of %s is %d" % (name, number))
 
 '''
-del <Dictionary>[] removes a key, value pair by taking a key
-<Dictionary>.pop() is the same concept
+del <Dictionary>[key] removes a key, value pair by taking a key
+<Dictionary>.pop(key) is the same concept, but returns the value
+
+If we try <Dictionary>[key] for a key that doesn't exist, we get an error
+instead, do <Dictionary>.get(key)
+
+Add or modify a pair by doing <Dictionary>[key] = value
+
+To change Dictionary to a list of tuples, do <Dictionary>.items()
+
+.copy(), .clear() do the same things we do
+<Dictionary>.keys() returns a list of keys, the same thing with .values()
 '''
 
 #Tuples are an immutable, ordered collection of data 
