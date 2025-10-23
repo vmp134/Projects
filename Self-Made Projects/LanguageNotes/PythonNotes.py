@@ -112,12 +112,21 @@ If you haven't noticed, python checks for "code blocks", or tabs and indentation
 '''
 
 #Loops are relatively unchanged, though for loops are replaced with for:each.
+'''
+Range() takes 3 arguments but defaults to range(end). 
+Usually, Rnage(start, stop, increment)
+There's also for:else, which does the else when the loop ends.
+When a statement is required after a colon, but we don't want to execute any code, we can use the word pass.
+'''
 for x in range(5):
     print(x)
 for x in myList:
     print(x)
+for x in myList:
+    pass
 
-'''While loops include break and continue conditions.'''
+'''Loops include break and continue conditions.
+Continues skip the current iteration and continue with the next.'''
 x = 0
 while True:
     print (x)
