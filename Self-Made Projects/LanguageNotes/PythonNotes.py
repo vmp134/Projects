@@ -146,8 +146,24 @@ else:
 def print_string():
     print("Yuh")
 
+print_string()
+
+def add_three(a, b, c):
+    return a+b+c
+
+def add_many(*aa):
+    total = 0
+    for a in aa:
+        total += a
+    return total
+
+def nestedFunction(f, x):
+    return f(x)
+
 '''
-Otherwise, functions remain relatively unchanged. You chan choose if you want to return or not
+Functions return None by default
+Remember as well default parameters when we don't pass arguments
+Otherwise, functions remain relatively unchanged. You can choose if you want to return or not
 '''
 
 #Classes are relatively simple, the concepts are the sane as java.
