@@ -238,13 +238,15 @@ Advanced Set Functions
 
 '''
 You could do:
-import draw
-form draw import draw_game
+import draw as dra
+from dra import draw_game
 import *, to import all
 
 You can also tell python where to find modules
 PYTHONPATH=/code
 sys.path.append("/code")
+
+You can create a function in a different python file and import it as a module
 '''
 
 #Packages are directories with a __init__.py file, and can decide which modules are internal.

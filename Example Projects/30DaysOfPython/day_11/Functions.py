@@ -118,15 +118,32 @@ def is_empty(lst):
 '''NOT DOING ALL THAT'''
 
 #1
-def is_prime:
+'''NOT DOING THIS EITHER >:('''
 
 #2
-
+'''O(N^2) makes me sad'''
+def uniqueList(lst):
+    for i in range(len(lst)):
+        temp = lst.pop(i)
+        if temp in list: return False
+    return True
 
 #3
-
+def sameType(lst):
+    typePrev = type(lst[0])
+    for i in range(1, len(lst)):
+        if type(lst[i]) != typePrev:
+            return False
+        typePrev = type(lst[i])
+    return True
 
 #4
-
+def ValidVariable(string):
+    if string[0] == '1' or '2' or '3' or '4' or '5' or '6' or '7' or '8' or '9' or '0':
+        return False
+    elif '!' or '@' or '#' or '$' or '%' or '^' or '&' or '*' or '(' or ')' or '-' or '+' or '=' in string:
+        return False
+    return True
 
 #5
+'''We did this last time'''
