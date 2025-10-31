@@ -188,9 +188,14 @@ def nestedFunction(f, x):
 Functions return None by default
 Remember as well default parameters when we don't pass arguments
 Otherwise, functions remain relatively unchanged. You can choose if you want to return or not
+They are like OCaml functions, where they can be taken as arguments and returned. Notable higher-order functions include:
+    map(f, x) - applies function f to x
+    filter(f, x) - returns values that return True when f is applied
+    reduce(f, x) - applies f to x but returns a single value, like List.fold() in OCaml
+Closures apply as well
 '''
 
-#Lambda Functions are anonymous functions without a name
+#Lambda Functions are anonymous functions.
 
 addThree = lambda a, b, c: a + b + c
 
@@ -199,6 +204,10 @@ To invoke a lambda in print, encapsulate with parentheses
 '''
 
 print((lambda a,b: a+b)(2,3))
+
+#Decorators add a new functionality to an existing object.
+
+
 
 #Classes are relatively simple, the concepts are the sane as java.
 class TestClass:
