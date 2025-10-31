@@ -97,11 +97,30 @@ You can unpack lists by setting variables equal to the list
 a, *b = myList
 print(a)
 
+#List Comprehension is another way to change things into a list
+
+ExampleString = 'Language'
+lst = [i for i in ExampleString]
+
+'''
+Can also use if statements inside
+'''
+
+numbers = [i for i in range(5) if i%2 == 0]
+print(numbers)
+
+'''
+Or to flatten lists - keep in mind the multiple for statements
+'''
+
+list_of_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened_list = [number for row in list_of_lists for number in row]
+
 #Condition statements are the same as java, e.g. ==, >, <, >=, <=
 if 3 in myList:
     print("3 is in myList")
 elif len(myList) > 0:
-    print("Somethign is in myList")
+    print("Something is in myList")
 else:
     print("MyList is empty.")
 
@@ -170,6 +189,16 @@ Functions return None by default
 Remember as well default parameters when we don't pass arguments
 Otherwise, functions remain relatively unchanged. You can choose if you want to return or not
 '''
+
+#Lambda Functions are anonymous functions without a name
+
+addThree = lambda a, b, c: a + b + c
+
+'''
+To invoke a lambda in print, encapsulate with parentheses
+'''
+
+print((lambda a,b: a+b)(2,3))
 
 #Classes are relatively simple, the concepts are the sane as java.
 class TestClass:
