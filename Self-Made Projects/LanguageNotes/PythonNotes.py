@@ -37,6 +37,10 @@ age = 19
 print("I am {}, I am {} years old".format(name, age))
 print(f"I am {name}, I am {age} years old")
 
+'''Separators, too to change the ending'''
+print("A", sep = " ")
+print("B")
+
 #Remember Java's String methods? Some of those apply here.
 print(myString.index("e"))
 
@@ -114,7 +118,8 @@ If you haven't noticed, python checks for "code blocks", or tabs and indentation
 #Loops are relatively unchanged, though for loops are replaced with for:each.
 '''
 Range() takes 3 arguments but defaults to range(end). 
-Usually, Rnage(start, stop, increment)
+Usually, Range(start, stop, increment)
+Range stops at 1 before stop.
 There's also for:else, which does the else when the loop ends.
 When a statement is required after a colon, but we don't want to execute any code, we can use the word pass.
 '''
