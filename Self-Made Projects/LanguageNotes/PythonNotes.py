@@ -188,16 +188,18 @@ def nestedFunction(f, x):
 Functions return None by default
 Remember as well default parameters when we don't pass arguments
 Otherwise, functions remain relatively unchanged. You can choose if you want to return or not
-They are like OCaml functions, where they can be taken as arguments and returned. Notable higher-order functions include:
+They are like OCaml functions, where they can be taken as arguments and returned. Notable functions include:
     map(f, x) - applies function f to x
     filter(f, x) - returns values that return True when f is applied
     reduce(f, x) - applies f to x but returns a single value, like List.fold() in OCaml
+THESE RETURN ITERATORS, not lists, so enclose with list() to convert.
 Closures apply as well
 '''
 
 #Lambda Functions are anonymous functions.
 
 addThree = lambda a, b, c: a + b + c
+trueOrFalse = lambda arg: True if arg >= 1 else False
 
 '''
 To invoke a lambda in print, encapsulate with parentheses
@@ -207,7 +209,35 @@ print((lambda a,b: a+b)(2,3))
 
 #Decorators add a new functionality to an existing object.
 
+'''
+uppercase_decorator takes a function, then turns the string output of the function into uppercase.
+'''
 
+def uppercase_decorator(function):
+    def wrapper():
+        func = function()
+        make_uppercase = func.upper()
+        return make_uppercase
+    return wrapper
+
+'''
+The important part.
+'''
+
+@uppercase_decorator
+
+def greeting():
+    return 'Welcome to Python'
+print(greeting())
+
+#Sorted() can be applied to any datatype. Keep in mind python sorting is always ascending.
+
+student_tuples = [
+    ('john', 'A', 15),
+    ('jane', 'B', 12),
+    ('dave', 'B', 10),
+]
+sortedTuples = sorted(student_tuples, key=lambda student: student[2])
 
 #Classes are relatively simple, the concepts are the sane as java.
 class TestClass:
