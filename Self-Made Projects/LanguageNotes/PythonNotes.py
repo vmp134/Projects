@@ -325,6 +325,20 @@ __init__.py:
 __all__ = ["bar"]
 '''
 
+#Errors 
+'''
+SyntaxError - Wrong syntax usage / character usage for code
+NameError - Undefined variables
+IndexError - Going out of bounds for iterables
+ModuleNotFoundError - Module name is misspelled
+AttributeError - Function does not exist in module or is misspelled
+KeyError - Key:value pair does not exist in dictionary
+TypeError - Wrong type usage
+ImportError - Function does not exist in module or is misspelled
+ValueError - Changing type for a value whose type cannot be changed 
+ZeroDivisionError - Dividing by zero
+'''
+
 #The input() method receives an input, but does not know what type of variable it is.
 num = int(input())
 print(num)
