@@ -317,6 +317,48 @@ sys.path.append("/code")
 You can create a function in a different python file and import it as a module
 '''
 
+#Datetime is a specific module to handle dates and times.
+
+from datetime import datetime
+now = datetime.now()
+print(now)
+
+'''
+Instead of f, we can use strftime to format datetime
+'''
+
+time_now = now.strftime("%m/%d/%Y, %H:%M:%S")
+print(time_now)
+
+'''
+strptime is String to Time
+'''
+
+Dobject1 = datetime.strptime("September 21, 1987", "%B %d, %Y")
+print(Dobject1)
+
+'''
+date(y,m,d) gives a date object
+'''
+
+from datetime import date
+Dobject2 = date(2006, 1, 6)
+print(Dobject2)
+
+'''
+time(h,m,s,ms) gives time
+You can subtract times as well by subtraction or using timedelta.
+'''
+
+from datetime import time
+Tobject1 = time(10,30,30)
+
+from datetime import timedelta
+t1 = timedelta(weeks=12, days=10, hours=4, seconds=20)
+t2 = timedelta(days=7, hours=5, minutes=3, seconds=30)
+t3 = t1 - t2
+print("t3 =", t3)
+
 #Packages are directories with a __init__.py file, and can decide which modules are internal.
 
 '''
