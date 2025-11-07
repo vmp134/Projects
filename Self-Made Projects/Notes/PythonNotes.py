@@ -281,7 +281,7 @@ To change Dictionary to a list of tuples, do <Dictionary>.items()
 planets = ("Earth", "Jupiter", "Mars", "Saturn")
 PlanetList = list(planets)
 
-#Sets are like tuples, but unordered. You can add and remove in sets.
+#Sets are like tuples, but unordered. Items are immutable, and you can add and remove in sets. No duplicates allowed.
 
 numbers = {3.12, 5.22, 9.14, 2.1}
 numbers.add(9.4)
@@ -367,7 +367,7 @@ __init__.py:
 __all__ = ["bar"]
 '''
 
-#Errors 
+#Errors raised in python:
 '''
 SyntaxError - Wrong syntax usage / character usage for code
 NameError - Undefined variables
@@ -380,6 +380,9 @@ ImportError - Function does not exist in module or is misspelled
 ValueError - Changing type for a value whose type cannot be changed 
 ZeroDivisionError - Dividing by zero
 '''
+
+#Exception
+
 
 #The input() method receives an input, but does not know what type of variable it is.
 num = int(input())
