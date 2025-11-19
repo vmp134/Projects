@@ -97,7 +97,31 @@ You can unpack lists by setting variables equal to the list
 a, *b = myList
 print(a)
 
-#On the topic of unpacking, here's 
+'''
+You can also do the opposite, packing them to account for an unknown number of items
+'''
+
+def sum_all(*nums):
+    ret = 0
+    for i in nums:
+        ret += i
+    return ret
+
+'''
+We use enumerate to check the index of an item in a list
+'''
+
+for index, item in enumerate([20, 30, 40]):
+    print(index, item)
+
+'''
+Lists can be combined through zip
+'''
+odds = [1, 3, 5, 7, 9]
+evens = [0, 2, 4, 6, 8]
+topRow = []
+for i, j in zip(odds, evens):
+    topRow.append(j, i)
 
 #List Comprehension is another way to change things into a list
 
@@ -282,6 +306,23 @@ To change Dictionary to a list of tuples, do <Dictionary>.items()
 
 planets = ("Earth", "Jupiter", "Mars", "Saturn")
 PlanetList = list(planets)
+
+#Remember list unpacking? here's that for tuples and dictionaries.
+
+Ea, Ju, *P = planets
+
+numA, *nums = phonebook.values()
+def printPhone(name, number):
+    print(name + number)
+printPhone(**phonebook)
+
+'''
+Packing also applies here.
+'''
+
+def printPhoneInfo(**phones):
+    for key in phones:
+        print(f"{key} = {phones[key]}")
 
 #Sets are like tuples, but unordered. Items are immutable, and you can add and remove in sets. No duplicates allowed.
 
