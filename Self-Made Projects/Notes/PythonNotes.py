@@ -97,6 +97,8 @@ You can unpack lists by setting variables equal to the list
 a, *b = myList
 print(a)
 
+#On the topic of unpacking, here's 
+
 #List Comprehension is another way to change things into a list
 
 ExampleString = 'Language'
@@ -381,8 +383,15 @@ ValueError - Changing type for a value whose type cannot be changed
 ZeroDivisionError - Dividing by zero
 '''
 
-#Exception
-
+#Exceptions are for when code brings up errors, with the general format being:
+try:
+    print(10 + '5')
+except TypeError:
+    print("10" + 5)
+else: 
+    print(10 + "5")
+finally: 
+    print("Error")
 
 #The input() method receives an input, but does not know what type of variable it is.
 num = int(input())
