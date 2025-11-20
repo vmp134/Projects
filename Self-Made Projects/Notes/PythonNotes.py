@@ -265,6 +265,12 @@ student_tuples = [
 ]
 sortedTuples = sorted(student_tuples, key=lambda student: student[2])
 
+'''
+where
+sorted(iterable, key=None, reverse=false)
+is the default
+'''
+
 #Classes are relatively simple, the concepts are the sane as java.
 class TestClass:
     def __init__(self):
@@ -401,6 +407,33 @@ t1 = timedelta(weeks=12, days=10, hours=4, seconds=20)
 t2 = timedelta(days=7, hours=5, minutes=3, seconds=30)
 t3 = t1 - t2
 print("t3 =", t3)
+
+#Regex is located in module re
+
+import re
+
+'''
+re.match(substring, string, flags) - Searches start of string and returns matched objects
+    .span() - gives the indeces for where substring is located in string
+    flags include re.IGNORECASE, etc
+        re.I - include all cases
+re.search(substring, string, flags) - Searches all throughout the string
+re.findall(substring, string, flags) - returns all the matched objects in string as a list
+re.split(substirng, string, flags) - Takes a string, splits it at the match points, returns a list
+re.sub(substring, replacement, string, flags) - Replaces one or many matches within a string
+
+If we want to account for extra cases, we use these identifiers in regex, as r"identifier"
+    [A-Za-z0-9] - accepts chars in set, e.g. [Aa]pple accounts for Apple and apple
+    \ - special characters, where \d is only digits and \D is no digits
+    . - any character except \n
+    ^ - starts with, e.g. r"^abc" means a string that starts with abc and r"[^abc]" means any string that doesn't
+    $ - ends with
+    * - 0 or more times
+    + - 1 or more times
+    ? - 0 or 1 time
+    () - number of characters allowed, e.g. (3) is exactly 3 and (3,8) is between 3 and 8, with (3,) meaning at least 3
+    | - or
+'''
 
 #Packages are directories with a __init__.py file, and can decide which modules are internal.
 
