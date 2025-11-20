@@ -43,8 +43,10 @@ void main(void) {
     matrix += 4;
     **matrix = 1;
 
+    //When done, be sure to free unused memory locations.
     
-
+    free(arr);
+    free(matrix);
 }
 
 

@@ -351,13 +351,14 @@ Advanced Set Functions
 <Set>.symmetric_difference(set) - returns symmetric difference of Set and set
 '''
 
-#Modules in java are like java class files, with the exception that you have to import them.
+#Modules in Python are like java class files, with the exception that you have to import them.
 
 '''
 You could do:
 import draw as dra
 from dra import draw_game
 import *, to import all
+When you import functions, you no longer need to do module.function, instead only needing function
 
 You can also tell python where to find modules
 PYTHONPATH=/code
@@ -366,7 +367,47 @@ sys.path.append("/code")
 You can create a function in a different python file and import it as a module
 '''
 
-#Datetime is a specific module to handle dates and times.
+#os is a module designed to interact with the operating system
+
+
+
+#sys is a module designed to interact with python runtime environment
+
+
+
+#statistics is a self-explanatory module
+
+from statistics import * # importing all the statistics modules
+ages = [20, 20, 4, 24, 25, 22, 26, 20, 23, 22, 26]
+print(mean(ages))       # ~22.9
+print(median(ages))     # 23
+print(mode(ages))       # 20
+print(stdev(ages))      # ~2.3
+
+#math, like java's math has some interesting functions
+
+import math
+print(math.pi)           # 3.141592653589793, pi constant
+print(math.sqrt(2))      # 1.4142135623730951, square root
+print(math.pow(2, 3))    # 8.0, exponential function
+print(math.floor(9.81))  # 9, rounding to the lowest
+print(math.ceil(9.81))   # 10, rounding to the highest
+print(math.log10(100))   # 2, logarithm with 10 as base
+
+#string is a module that has some variations and functions on strings
+
+import string
+print(string.ascii_letters) # abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+print(string.digits)        # 0123456789
+print(string.punctuation)   # !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+
+#random is surprisingly not located in math
+
+from random import random, randint
+print(random())   # it doesn't take any arguments; it returns a value between 0 and 0.9999
+print(randint(5, 20)) # it returns a random integer number between [5, 20] inclusive
+
+#datetime is a specific module to handle dates and times.
 
 from datetime import datetime
 now = datetime.now()
@@ -433,6 +474,26 @@ If we want to account for extra cases, we use these identifiers in regex, as r"i
     ? - 0 or 1 time
     () - number of characters allowed, e.g. (3) is exactly 3 and (3,8) is between 3 and 8, with (3,) meaning at least 3
     | - or
+'''
+
+#You can read files in Python, just like java
+
+'''
+open(filename, mode)
+    mode - 
+        r - default, reads file, returns error if dne
+        a - appends items to file, or creates if dne
+        w - writes to file, or creates if dne
+        x - creates a file, returns error if file exists
+        t - text mode
+        b - binary mode
+file.close() - needed after file is done with
+    could also do "with as" to close after done using it
+file.read(number) - takes the entire text as string
+    number - optional, int that limits length of read
+    .splitlines() - splits the string by line into list
+file.readline() - reads only the first line
+file.readlines() - reads all text by lines and returns list
 '''
 
 #Packages are directories with a __init__.py file, and can decide which modules are internal.
