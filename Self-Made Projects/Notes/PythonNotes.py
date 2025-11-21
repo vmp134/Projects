@@ -369,11 +369,43 @@ You can create a function in a different python file and import it as a module
 
 #os is a module designed to interact with the operating system
 
+import os
 
+'''
+os.mkdir('directory_name') - Creating a directory
+os.chdir('path')           - Changing the current directory's path
+os.getcwd()                - Getting current working directory
+os.rmdir()                 - Removing directory
+os.remove()                - Removing file, which will raise an error if dne
+'''
+
+#File Notation for os module
+
+'''
+.txt    - Text
+.JSON   - Javascript Object Notation, usually just string form for dict or JS object
+    To convert to dict, import json and use json.loads(filename) 
+    To convert from dict, import json and use json.dumps(dict, indent=int)
+    To save as json, use json.dump(dict, output file, ensure_ascii=bool, indent=int)
+.csv    - Comma Separated Values, which is usually a spreadshet
+    To read csv files, import csv and use csv.reader(filename, split=str)
+.xlsx   - Excel, which is like csv
+    To read Excel files, import xlrd and use xlrd.open_workbook(filename)
+.xml    - like HTML, but there are no predefined tags. 
+    To read xml files, import xml.etree.ElementTree as ET and do:
+        tree = ET.parse('./files/xml_example.xml')
+        root = tree.getroot()
+        print('Root tag:', root.tag)
+        print('Attribute:', root.attrib)
+        for child in root:
+            print('field: ', child.tag)
+'''
 
 #sys is a module designed to interact with python runtime environment
 
-
+'''
+for example, sys.argv[1] uses the second input value in the terminal
+'''
 
 #statistics is a self-explanatory module
 
