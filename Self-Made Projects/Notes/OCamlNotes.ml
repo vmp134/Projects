@@ -47,3 +47,7 @@ let sumFold l = List.fold_left (fun a x - > a + x) 0 l
 
 let addOne l = List.map (fun x -> x + 1) l
 
+(*Parsing and lexing
+For a lexer, the simplest implementation is a bunch of else if code blocks to check regex
+A better implementation is a list of tuples (regex, (fun _ -> token)) that ensures no priority issues*)
+
