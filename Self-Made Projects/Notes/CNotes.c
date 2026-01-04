@@ -12,7 +12,7 @@ This is a multi-line comment.
 void main(void) {
 
     // Like Java, you must declare variable types and use semicolons.
-    int i = 10;
+    uint8_t i = 10;
     char *last = "Hello World!";
 
     //Unlike Java, Strings don't really "exist" in C, you are forced to use char pointers.

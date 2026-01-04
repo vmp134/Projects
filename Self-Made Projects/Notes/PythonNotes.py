@@ -384,7 +384,8 @@ os.remove()                - Removing file, which will raise an error if dne
 '''
 .txt    - Text
 .JSON   - Javascript Object Notation, usually just string form for dict or JS object
-    To convert to dict, import json and use json.loads(filename) 
+    To convert to dict, import json and use json.load(filename) 
+        IMPORTANT: .loads means load from string
     To convert from dict, import json and use json.dumps(dict, indent=int)
     To save as json, use json.dump(dict, output file, ensure_ascii=bool, indent=int)
 .csv    - Comma Separated Values, which is usually a spreadshet
@@ -520,7 +521,9 @@ open(filename, mode)
         t - text mode
         b - binary mode
 file.close() - needed after file is done with
-    could also do "with as" to close after done using it
+    could also do "with as" to close after done using it, e.g.
+        with open (filename, mode) as [name]:
+            code
 file.read(number) - takes the entire text as string
     number - optional, int that limits length of read
     .splitlines() - splits the string by line into list
