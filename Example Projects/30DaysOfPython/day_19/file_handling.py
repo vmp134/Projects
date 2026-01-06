@@ -1,5 +1,4 @@
 #1
-
 def countLinesWords(file):
     f = open(file, "r")
     fileString = f.read()
@@ -41,24 +40,34 @@ def listOfAddresses(file):
         return ret
 print(listOfAddresses("Projects/Example Projects/30DaysOfPython/Misc/data/email_exchanges_big.txt"))
 
-
 #5
 def MostCommonWords(file, num):
-    
+    with open(file, "r") as f:
+        arr = f.read().split()
+        ret = dict()
+        for word in arr:
+            if word in ret: ret[word] += 1
+            else: ret[word] = 1
+        return sorted(ret.items(), key=lambda word: word[1])[-num:]
 
 
 #6
-
-
+#function application
 
 #7
 
 
-
 #8
-
-
+#Function application
 
 #9
-
+def CountingProg(file):
+    with open(file, "r") as f:
+        arr = f.readlines()
+        ret = {"python":0, "javascript":0, "java":0}
+        for line in arr:
+            if "python" in line.lower(): ret["python"] += 1
+            elif "javascript" in line.lower(): ret["javascript"] += 1
+            elif "java" in line.lower(): ret["java"] += 1
+        return sorted(ret.items(), key=lambda language: language[1])
 
