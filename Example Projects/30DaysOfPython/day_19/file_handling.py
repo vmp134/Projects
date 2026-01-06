@@ -32,11 +32,19 @@ def mostPopulated(file, num):
         return populationSort[-num:]
 
 #4
-
+def listOfAddresses(file):
+    with open(file, "r") as f:
+        arr = f.readlines()
+        ret = list()
+        for item in arr: 
+            if "Author" in item: ret.append(item[8:-1])
+        return ret
+print(listOfAddresses("Projects/Example Projects/30DaysOfPython/Misc/data/email_exchanges_big.txt"))
 
 
 #5
-
+def MostCommonWords(file, num):
+    
 
 
 #6
