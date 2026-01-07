@@ -539,6 +539,24 @@ __init__.py:
 __all__ = ["bar"]
 '''
 
+#Python Package Manager, or PIP installs python packages
+
+'''
+Commands:
+    pip --version
+    pip install [name]
+    pip uninstall [name]
+    pip list
+        see the installed packages on the machine
+    pip show [name]
+        see the info about a package
+        --verbose adds more details
+    pip freeze 
+        installed packages with versions
+        
+
+'''
+
 #Errors raised in python:
 '''
 SyntaxError - Wrong syntax usage / character usage for code
