@@ -1,9 +1,5 @@
-import os
 import time
 import psutil
-from flask import Flask, jsonify
-
-app = Flask(__name__)
 
 def displayUsage(cpuUsage, memUsage, bars=50):
     cpu = cpuUsage/100.0
@@ -15,3 +11,6 @@ def displayUsage(cpuUsage, memUsage, bars=50):
     print(f"\rCPU: {cpu_bar} {cpuUsage:.2f}%  ", end="")
     print(f"MEM: {mem_bar} {memUsage:.2f}%  ", end="\r")
 
+while True:
+    displayUsage(psutil.cpu_percent(), psutil.virtual_memory().percent, 20)
+    time.sleep(0.5)
