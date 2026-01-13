@@ -312,6 +312,7 @@ To change Dictionary to a list of tuples, do <Dictionary>.items()
 
 planets = ("Earth", "Jupiter", "Mars", "Saturn")
 PlanetList = list(planets)
+planets[1]
 
 #Remember list unpacking? here's that for tuples and dictionaries.
 

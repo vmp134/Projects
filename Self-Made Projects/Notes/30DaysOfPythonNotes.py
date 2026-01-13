@@ -84,13 +84,14 @@ Methods:
         extracts json from {RESPONSE} 
 
 Methods Example
-    import requests
-    url = 'https://www.w3.org/TR/PNG/iso_8859-1.txt'
-    response = requests.get(url)
-    print(response)
-    print(response.status_code)
-    print(response.headers) 
-    print(response.text)
+
+import requests
+url = 'https://www.w3.org/TR/PNG/iso_8859-1.txt'
+response = requests.get(url)
+print(response)
+print(response.status_code)
+print(response.headers) 
+print(response.text)
 
 Package Creation
     A package is a folder that contains one or more module files, each with multiple objects
@@ -114,7 +115,20 @@ Further Packages to Know
 '''
 
 #Day 21 - Classses and Objects
+'''
+Python is object-oriented, like Java
+    OOP Recap: 
+    Classes are constructors of objects
+    Objects can have methods
+    Default methods are viable, where the variable is already defined in function line
+    Getters and Setters
+'''
 
+class person:
+    def __init__ (self, name='empty'):
+        self.name = name
+p = person('Victor')
+print(p.name)
 
 #Day 22 - Web Scraping
 
