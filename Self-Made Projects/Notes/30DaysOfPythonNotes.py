@@ -84,6 +84,7 @@ Methods:
         extracts json from {RESPONSE} 
 
 Methods Example
+'''
 
 import requests
 url = 'https://www.w3.org/TR/PNG/iso_8859-1.txt'
@@ -93,6 +94,7 @@ print(response.status_code)
 print(response.headers) 
 print(response.text)
 
+'''
 Package Creation
     A package is a folder that contains one or more module files, each with multiple objects
     see "mypackage"
@@ -131,7 +133,13 @@ p = person('Victor')
 print(p.name)
 
 #Day 22 - Web Scraping
+'''
+Web scraping is the collection of data from a website and storing it on a local machine or database
+We use BeautifulSoup4 and requests to scrape
+'''
 
+import requests
+from bs4 import BeautifulSoup
 
 #Day 23 - Virtual Environment
 
