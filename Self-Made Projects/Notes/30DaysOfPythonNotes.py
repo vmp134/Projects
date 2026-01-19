@@ -141,6 +141,11 @@ We use BeautifulSoup4 and requests to scrape
 import requests
 from bs4 import BeautifulSoup
 
+url2 = 'https://archive.ics.uci.edu/dataset/320/student+performance'
+response = requests.get(url)
+status = response.status_code
+print(status)
+
 #Day 23 - Virtual Environment
 
 
