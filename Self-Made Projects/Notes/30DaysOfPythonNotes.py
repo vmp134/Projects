@@ -81,10 +81,11 @@ Methods:
     .text
         extracts text from {RESPONSE}
     .json
-        extracts json from {RESPONSE} 
+        extracts json from {RESPONSE}
+    .content
+        extracts bytes from {RESPONSE} 
 
 Methods Example
-'''
 
 import requests
 url = 'https://www.w3.org/TR/PNG/iso_8859-1.txt'
@@ -94,7 +95,7 @@ print(response.status_code)
 print(response.headers) 
 print(response.text)
 
-'''
+
 Package Creation
     A package is a folder that contains one or more module files, each with multiple objects
     see "mypackage"
@@ -136,18 +137,38 @@ print(p.name)
 '''
 Web scraping is the collection of data from a website and storing it on a local machine or database
 We use BeautifulSoup4 and requests to scrape
-'''
+
+BeautifulSoup Example
 
 import requests
 from bs4 import BeautifulSoup
 
 url2 = 'https://archive.ics.uci.edu/dataset/320/student+performance'
-response = requests.get(url)
-status = response.status_code
-print(status)
+response2 = requests.get(url)
+content = response2.content
+soup = BeautifulSoup(content, 'html.parser')
+print(soup.title)
+print(soup.title.get_text())
+print(soup.body)
+print(response2.status_code)
+
+tables = soup.find_all('table', {'cellpadding':'3'})
+table = tables[0]
+for td in table.find('tr').find_all('td'):
+    print(td.text)
+'''
 
 #Day 23 - Virtual Environment
+'''
+Virtual environments create isolated environments so that we don't have dependency conflicts across projects
 
+On Bash, make sure to do
+python -m venv [name]
+source [name]/bin/activate
+to run the virtual environment, and
+deactivate
+to exit out.
+'''
 
 #Day 24 - Statistics
 
