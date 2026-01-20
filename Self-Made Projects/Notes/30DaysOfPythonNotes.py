@@ -60,11 +60,11 @@
 Python Package Manager, or PIP (Preferred Installer Program), installs python packages
 Commands:
     pip --version
-    pip install [name]
-    pip uninstall [name]
+    pip install [NAME]
+    pip uninstall [NAME]
     pip list
         see the installed packages on the machine
-    pip show [name]
+    pip show [NAME]
         see the info about a package
         --verbose adds more details
     pip freeze 
@@ -86,16 +86,17 @@ Methods:
         extracts bytes from {RESPONSE} 
 
 Methods Example
+'''
 
 import requests
 url = 'https://www.w3.org/TR/PNG/iso_8859-1.txt'
 response = requests.get(url)
 print(response)
-print(response.status_code)
-print(response.headers) 
-print(response.text)
+#print(response.status_code)
+#print(response.headers) 
+#print(response.text)
 
-
+'''
 Package Creation
     A package is a folder that contains one or more module files, each with multiple objects
     see "mypackage"
@@ -139,6 +140,7 @@ Web scraping is the collection of data from a website and storing it on a local 
 We use BeautifulSoup4 and requests to scrape
 
 BeautifulSoup Example
+'''
 
 import requests
 from bs4 import BeautifulSoup
@@ -148,30 +150,94 @@ response2 = requests.get(url)
 content = response2.content
 soup = BeautifulSoup(content, 'html.parser')
 print(soup.title)
-print(soup.title.get_text())
-print(soup.body)
-print(response2.status_code)
+#print(soup.title.get_text())
+#print(soup.body)
+#print(response2.status_code)
 
 tables = soup.find_all('table', {'cellpadding':'3'})
-table = tables[0]
-for td in table.find('tr').find_all('td'):
-    print(td.text)
-'''
+#table = tables[0]
+#for td in table.find('tr').find_all('td'):
+    #print(td.text)
+
 
 #Day 23 - Virtual Environment
 '''
 Virtual environments create isolated environments so that we don't have dependency conflicts across projects
 
 On Bash, make sure to do
-python -m venv [name]
-source [name]/bin/activate
+python -m venv [NAME]
+source [NAME]/bin/activate
 to run the virtual environment, and
 deactivate
 to exit out.
 '''
 
 #Day 24 - Statistics
+'''
+To analyze data, we have statistics and numpy
+numpy is good for working with arrays, which are different from python lists
+Methods:
+    numpy.array(List, [OPTIONAL]dtype={TYPE}, [OPTIONAL]order=)
+        Creates a numpy array from a list
+        Datatype can be changed to float, bool, str, etc.
+        Order:
+            C - Row-major order, which is default
+            F - Column-major order
+            A - Any order, numpy chooses between C or F based on the most efficient
+            K - Keep order, when creating a new array from an existing one
+    numpy.zeros(List, [OPTIONAL]dtype={TYPE}, [OPTIONAL]order=)
+    numpy.ones(List, [OPTIONAL]dtype={TYPE}, [OPTIONAL]order=)
+        Creates arrays of solely zeroes or ones
 
+    {ARRAY}.tolist() 
+        Turns numpy array to list
+    {ARRAY}.shape
+        Gives the dimensions of the numpy array
+    {ARRAY}.dtype
+        Gives the datatype of the numpy array
+    {ARRAY}.size
+        Gives the number of items in the numpy array
+    {ARRAY}.reshape({SIZE})
+        Reshapes the array into a valid A x B x C x ... array
+    {ARRAY}.flatten()
+        Flattens the array into a 1-Dimensional array
+    {ARRAY}.hstack({ARRAY}, {ARRAY})
+    {ARRAY}.vstack({ARRAY}, {ARRAY})
+        Appends arrays to each other horizontally or vertically
+
+You can also use operations on arrays, which affect all items in the array
+You can also convert array datatype
+You can slice arrays like lists
+
+Numpy also has random numbers
+Methods:
+    numpy.random.random({INT})
+        Generates a list of {INT} random floats, default single random number
+    numpy.random.randint({INT},{INT}, [OPTIONAL]size={SIZE})
+        Generates one random int between two ints, with the option to create an array
+    numpy.random.normal(mu, sigma, {SIZE})
+        Normal distribution of random numbers
+
+    
+
+
+'''
+
+import statistics
+import numpy as np
+print ('numpy', np.__version__)
+#print(dir(np)) #Prints the methods of numpy
+
+numpyExample = [0,1,-1,0,0]
+numpyExample2 = [[1,2],[3,4]]
+
+numpy_array_from_list = np.array(numpyExample)
+numpy_bool = np.array(numpyExample, dtype = bool)
+numpy_array_from_list2 = np.array(numpyExample2)
+numpyList = numpy_array_from_list2.tolist()
+
+print(numpyExample)
+print(numpy_array_from_list)
 
 #Day 25 - Pandas
 
