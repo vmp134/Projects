@@ -177,7 +177,7 @@ to exit out.
 To analyze data, we have statistics and numpy
 numpy is good for working with arrays, which are different from python lists
 Methods:
-    numpy.array(List, [OPTIONAL]dtype={TYPE}, [OPTIONAL]order=)
+    numpy.array(List, [OPT]dtype={TYPE}, [OPT]order=)
         Creates a numpy array from a list
         Datatype can be changed to float, bool, str, etc.
         Order:
@@ -185,8 +185,8 @@ Methods:
             F - Column-major order
             A - Any order, numpy chooses between C or F based on the most efficient
             K - Keep order, when creating a new array from an existing one
-    numpy.zeros(List, [OPTIONAL]dtype={TYPE}, [OPTIONAL]order=)
-    numpy.ones(List, [OPTIONAL]dtype={TYPE}, [OPTIONAL]order=)
+    numpy.zeros(List, [OPT]dtype={TYPE}, [OPT]order=)
+    numpy.ones(List, [OPT]dtype={TYPE}, [OPT]order=)
         Creates arrays of solely zeroes or ones
 
     {ARRAY}.tolist() 
@@ -204,6 +204,8 @@ Methods:
     {ARRAY}.hstack({ARRAY}, {ARRAY})
     {ARRAY}.vstack({ARRAY}, {ARRAY})
         Appends arrays to each other horizontally or vertically
+    {ARRAY}.itemsize
+        checks the size of an array in bytes
 
 You can also use operations on arrays, which affect all items in the array
 You can also convert array datatype
@@ -213,23 +215,50 @@ Numpy also has random numbers
 Methods:
     numpy.random.random({INT})
         Generates a list of {INT} random floats, default single random number
-    numpy.random.randint({INT},{INT}, [OPTIONAL]size={SIZE})
+    numpy.random.randint({INT},{INT}, [OPT]size={SIZE})
         Generates one random int between two ints, with the option to create an array
     numpy.random.normal(mu, sigma, {SIZE})
         Normal distribution of random numbers
 
 Numpy also has matrices, which are not the same as arrays
 Methods:
-    numpy.matrix({ARRAY}, [OPTIONAL]dtype={TYPE})
+    numpy.matrix({ARRAY}, [OPT]dtype={TYPE})
         Changes an array into a matrix
     numpy.asarray({MATRIX})
         Changes a matrix into an array
+
+Finally, numpy has statistics-based methods
+Methods:
+    {ARRAY}.min()
+    {ARRAY}.max()
+    {ARRAY}.mean()
+    {ARRAY}.median()
+    {ARRAY}.std()
+        {INT} 
+        {FLOAT}
+        Standard statistics methods
+    numpy.amin(a, axis=b)
+    numpy.amax(a, axis=b)
+        {ARRAY} -> {INT} -> {ARRAY}
+        returns the column or row with the array min or max based on axis=0 or axis=1
+
 
 Miscellaneous
 Methods:
     numpy.arrange(a, b, c)
         {INT} -> {INT} -> {INT} -> {INT ARRAY}
         returns an array of numbers between a and b, with intervals of c
+    numpy.linspace(a, b, num=c, [OPT]endpoint = d)
+        {FLOAT} -> {FLOAT} -> {INT} -> {BOOL} -> {FLOAT ARRAY}
+        returns an array of numbers between a and b, with c number of linear intervals
+        to include the last number, consult d
+        linspace -> linearly spaced
+    numpy.logspace(a, b, num=c, [OPT]endpoint = d)
+        {FLOAT} -> {FLOAT} -> {INT} -> {BOOL} -> {FLOAT ARRAY}
+        returns an array of numbers between a and b, with c number of logarithmic intervals
+        to include the last number, consult d
+        logspace -> logarithmically spaced
+
 
 '''
 
