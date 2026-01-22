@@ -72,17 +72,17 @@ Commands:
 
 To get read data from a website or API, we can use a package called requests
 Methods:
-    .get()        
+    requests.get()        
         opens network and fetches data from url, returns {RESPONSE} Object
-    .status_code
+    {RESPONSE}.status_code
         returns status of object, success, failure, etc.
-    .headers
+    {RESPONSE}.headers
         checks header types
-    .text
+    {RESPONSE}.text
         extracts text from {RESPONSE}
-    .json
+    {RESPONSE}.json
         extracts json from {RESPONSE}
-    .content
+    {RESPONSE}.content
         extracts bytes from {RESPONSE} 
 
 Methods Example
@@ -218,8 +218,18 @@ Methods:
     numpy.random.normal(mu, sigma, {SIZE})
         Normal distribution of random numbers
 
-    
+Numpy also has matrices, which are not the same as arrays
+Methods:
+    numpy.matrix({ARRAY}, [OPTIONAL]dtype={TYPE})
+        Changes an array into a matrix
+    numpy.asarray({MATRIX})
+        Changes a matrix into an array
 
+Miscellaneous
+Methods:
+    numpy.arrange(a, b, c)
+        {INT} -> {INT} -> {INT} -> {INT ARRAY}
+        returns an array of numbers between a and b, with intervals of c
 
 '''
 
