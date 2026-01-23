@@ -30,23 +30,24 @@ void main(int argc, char **argv) {
     */
 
     //On the topic of pointers, think of them as pretty much the same as arrays in Java.
-    int *arr = malloc(sizeof(int));
+    int *arr = malloc(sizeof(int)*2);
     *arr = 0;
-    arr += 4;
+    arr += 1;
     *arr = 1;
 
     //We can also have pointers to pointers, so here's a 2D array for example:
-    int **matrix = malloc(sizeof(int));
+    int **matrix = malloc(sizeof(int*)*5);
     **matrix = 0;
-    *matrix += 4;
+    *matrix += 1;
     **matrix = 1;
-    *matrix -= 4;
-    matrix += 4;
+    *matrix -= 1;
+    matrix += 1;
     **matrix = 1;
 
     //When done, be sure to free unused memory locations.
+    //You MUST free the original malloc location.
     
-    free(arr);
+    free(arr-1);
     free(matrix);
 
     return EXIT_SUCCESS;

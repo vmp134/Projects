@@ -242,7 +242,6 @@ Methods:
         {ARRAY} -> {INT} -> {ARRAY}
         returns the column or row with the array min or max based on axis=0 or axis=1
 
-
 Miscellaneous
 Methods:
     numpy.arrange(a, b, c)
