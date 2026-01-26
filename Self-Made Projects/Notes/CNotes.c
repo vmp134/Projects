@@ -10,7 +10,7 @@ This is a multi-line comment.
 */
 
 //Like Java, you must have a main method.
-void main(int argc, char **argv) {
+int main(int argc, char **argv) {
 
     // Like Java, you must declare variable types and use semicolons.
     uint8_t i = 10;
@@ -35,19 +35,25 @@ void main(int argc, char **argv) {
     arr += 1;
     *arr = 1;
 
+    //Of course, you can always use brackets for array accesses
+    printf("%d", arr[0]);
+
     //We can also have pointers to pointers, so here's a 2D array for example:
     int **matrix = malloc(sizeof(int*)*5);
-    **matrix = 0;
-    *matrix += 1;
-    **matrix = 1;
-    *matrix -= 1;
-    matrix += 1;
-    **matrix = 1;
+    for (int i = 0; i < 5; i++) {
+        *(matrix + i) = malloc(5*sizeof(int));
+    }
+    //Setting row 2, col 2 to 5
+    *(*(matrix + 2)+2) = 5;
 
     //When done, be sure to free unused memory locations.
     //You MUST free the original malloc location.
     
     free(arr-1);
+    
+    for (int i = 0; i< 5; i++) {
+        free(*(matrix + i));
+    }
     free(matrix);
 
     return EXIT_SUCCESS;
