@@ -72,8 +72,9 @@ Commands:
 
 To get read data from a website or API, we can use a package called requests
 Methods:
-    requests.get()        
-        opens network and fetches data from url, returns {RESPONSE} Object
+    requests.get(a)
+        {STRING} -> {RESPONSE}        
+        opens network and fetches data from url
     {RESPONSE}.status_code
         returns status of object, success, failure, etc.
     {RESPONSE}.headers
@@ -177,7 +178,8 @@ to exit out.
 To analyze data, we have statistics and numpy
 numpy is good for working with arrays, which are different from python lists
 Methods:
-    numpy.array(List, [OPT]dtype={TYPE}, [OPT]order=)
+    numpy.array(a, [OPT]dtype={TYPE}, [OPT]order=)
+        {LIST} -> {ARRAY}
         Creates a numpy array from a list
         Datatype can be changed to float, bool, str, etc.
         Order:
@@ -185,8 +187,9 @@ Methods:
             F - Column-major order
             A - Any order, numpy chooses between C or F based on the most efficient
             K - Keep order, when creating a new array from an existing one
-    numpy.zeros(List, [OPT]dtype={TYPE}, [OPT]order=)
-    numpy.ones(List, [OPT]dtype={TYPE}, [OPT]order=)
+    numpy.zeros(a, [OPT]dtype={TYPE}, [OPT]order=)
+    numpy.ones(a, [OPT]dtype={TYPE}, [OPT]order=)
+        {SIZE} -> {ARRAY}
         Creates arrays of solely zeroes or ones
 
     {ARRAY}.tolist() 
@@ -197,12 +200,14 @@ Methods:
         Gives the datatype of the numpy array
     {ARRAY}.size
         Gives the number of items in the numpy array
-    {ARRAY}.reshape({SIZE})
+    {ARRAY}.reshape(a)
+        {SIZE} -> {ARRAY}
         Reshapes the array into a valid A x B x C x ... array
     {ARRAY}.flatten()
         Flattens the array into a 1-Dimensional array
-    {ARRAY}.hstack({ARRAY}, {ARRAY})
-    {ARRAY}.vstack({ARRAY}, {ARRAY})
+    {ARRAY}.hstack(a, b)
+    {ARRAY}.vstack(a, b)
+        {ARRAY} -> {ARRAY} -> {ARRAY}
         Appends arrays to each other horizontally or vertically
     {ARRAY}.itemsize
         checks the size of an array in bytes
@@ -217,6 +222,9 @@ Methods:
         Generates a list of {INT} random floats, default single random number
     numpy.random.randint({INT},{INT}, [OPT]size={SIZE})
         Generates one random int between two ints, with the option to create an array
+    numpy.random.choice()
+    numpy.random.rand()
+    numpy.random.randn()
     numpy.random.normal(mu, sigma, {SIZE})
         Normal distribution of random numbers
 
@@ -226,6 +234,18 @@ Methods:
         Changes an array into a matrix
     numpy.asarray({MATRIX})
         Changes a matrix into an array
+
+Numpy can do linear algebra
+Methods:
+    numpy.dot(a, b)
+        {ARRAY} -> {ARRAY} -> {ARRAY}
+        Does the dot product of arrays
+    numpy.matmul(a,b)
+        {MATRIX} -> {MATRIX} -> {MATRIX}
+        Does matrix multiplication
+    numpy.linalg.det(a)
+        {MATRIX} -> {DOUBLE}
+        Finds determinant of matrix    
 
 Finally, numpy has statistics-based methods
 Methods:
@@ -241,6 +261,11 @@ Methods:
     numpy.amax(a, axis=b)
         {ARRAY} -> {INT} -> {ARRAY}
         returns the column or row with the array min or max based on axis=0 or axis=1
+    numpy.tile(a, b)
+    numpy.repeat(a, b)
+        {ARRAY} -> {INT} -> {ARRAY}
+        Tile repeats the whole of a, while repeat repeats each element
+
 
 Miscellaneous
 Methods:
