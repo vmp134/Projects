@@ -4,12 +4,12 @@ import shutil
 #Names of locations in case I need to change them quickly
 
 #For Linux
-#Root = "/home"
-#User = "/victorpeng"
+Root = "/home"
+User = "/GreenBeans"
 
 #For Windows
-Root = "/home"
-User = "/victor"
+#Root = "/home"
+#User = "/victor"
 
 Pic = "/Pictures"
 Aud = "/Music" 
@@ -34,15 +34,21 @@ destination = {
     ".mp4": Root + User + Vid,
     ".mov": Root + User + Vid,
 
+    ".txt": Root + User + Doc,
     ".docx": Root + User + Doc,
     ".pdf": Root + User + Doc,
     ".pptx": Root + User + Doc,
     ".stl": Root + User + Doc,
     ".xlsx": Root + User + Doc,
+    ".xls": Root + User + Doc,
+    ".csv": Root + User + Doc,
+    ".zip": Root + User + Doc,
 
     ".py": Root + User + Doc + Cod,
     ".java": Root + User + Doc + Cod,
-    ".c": Root + User + Doc + Cod
+    ".c": Root + User + Doc + Cod,
+    ".sql": Root + User + Doc + Cod
+    
 }
 
 #Actual Sort
