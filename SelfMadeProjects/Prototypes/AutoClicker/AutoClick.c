@@ -63,13 +63,16 @@ int main(int argc, char *argv[]) {
 
 
     //Configuring mouse clicks
-    int ev = ioctl(fd, UI_SET_EVBIT, EV_KEY); 
-    int key = ioctl(fd, UI_SET_KEYBIT, button);
-    if (ev < 0 || key < 0) {
-        perror("ioctl");
+    if (ioctl(fd, UI_SET_EVBIT, EV_KEY) < 0) {
+        perror("UI_SET_EVBIT");
         return EXIT_FAILURE;
     }
 
+    if (ioctl(fd, UI_SET_KEYBIT, button) < 0) {
+        perror("UI_SET_KEYBIT");
+        return EXIT_FAILURE;
+    }
+    
     if (ioctl(fd, UI_DEV_SETUP, &usetup) < 0) {
         perror("UI_DEV_SETUP");
         return EXIT_FAILURE;
