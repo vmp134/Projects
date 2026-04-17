@@ -9,15 +9,14 @@
 int main(int argc, char *argv[]) {
     //Guard Clause
     if (argc > 3 || argc == 1) {
-        printf("Error: Incorrect # of arguments\nUsage: %s <delay_ms> <button_code>\nUsage: %s <delay_ms>", argv[0], argv[0]);
+        printf("Error: Incorrect # of arguments\nUsage: %s <delay_ms> <button_code>\nUsage: %s <delay_ms>\n", argv[0], argv[0]);
         return EXIT_FAILURE;
     }
 
     //Argument handling
     int delay = atoi(argv[1]);
-
     if (delay <= 0) {
-        printf ("Error: Incorrect argument, <ms_delay> must be a nonzero positive number");
+        printf ("Error: Incorrect argument, <ms_delay> must be a nonzero positive number\n");
         return EXIT_FAILURE;
     }
     int button = BTN_LEFT;
@@ -28,7 +27,7 @@ int main(int argc, char *argv[]) {
         else if (button_type == 2) 
             button = BTN_RIGHT;
         else if (button_type != 0) {
-            printf("Error: Incorrect argument, <button_code> accepts:\n0: Left Click\n1: Middle Click\n2:Right Click");
+            printf("Error: Incorrect argument, <button_code> accepts:\n0: Left Click\n1: Middle Click\n2: Right Click\n");
             return EXIT_FAILURE;
         }
     }
