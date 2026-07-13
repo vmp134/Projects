@@ -1,0 +1,5 @@
+- Use either a map or minheap (heapq) to store the best laptop listings
+- Find a way to bypass captcha and IP Bans from Ebay
+- Find exact URLs for scraping
+- Use bs4 to parse HTML
+- Manual button in flask app to scrape and display items

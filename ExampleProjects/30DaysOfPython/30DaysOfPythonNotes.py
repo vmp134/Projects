@@ -303,6 +303,15 @@ print(numpyExample)
 print(numpy_array_from_list)
 
 #Day 25 - Pandas
+'''
+Pandas data structures are made up of series and dataframes
+A series is a column of data, while a dataframe is multiple series at once
+
+
+'''
+
+import pandas as pd
+
 
 
 #Day 26 - Python Web
