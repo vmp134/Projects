@@ -304,10 +304,10 @@ print(numpy_array_from_list)
 
 #Day 25 - Pandas
 '''
-Pandas data structures are made up of series and dataframes
-A series is a column of data, while a dataframe is multiple series at once
-
-
+Pandas is a library for data structures and analysis
+We use Series and Dataframes for analysis
+    Series - A column of data
+    Dataframe - Multidimensional table, or collection of series
 '''
 
 import pandas as pd
